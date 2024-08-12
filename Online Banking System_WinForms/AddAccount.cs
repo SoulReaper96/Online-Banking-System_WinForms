@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Online_Banking_System_WinForms
@@ -36,13 +30,23 @@ namespace Online_Banking_System_WinForms
                 return;
             }
 
+            string username = Login._username;
+            int userId = GetUserIdByUsername(username);
+
+            if (userId == 0)
+            {
+                MessageBox.Show("Invalid user.");
+                return;
+            }
+
             string _connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Administrator\\Documents\\OnlineBanking.mdf;Integrated Security=True;Connect Timeout=30";
 
             using (SqlConnection connection = new SqlConnection(_connectionString))
             {
-                string Query = "INSERT INTO AccountTable (HolderName, AccountNumber, AccountType, Balance) VALUES (@HolderName, @AccountNumber, @AccountType, @Balance)";
+                string Query = "INSERT INTO AccountTable (UserId, HolderName, AccountNumber, AccountType, Balance) VALUES (@UserId, @HolderName, @AccountNumber, @AccountType, @Balance)";
                 using (SqlCommand command = new SqlCommand(Query, connection))
                 {
+                    command.Parameters.AddWithValue("@UserId", userId);
                     command.Parameters.AddWithValue("@HolderName", AcctName_tb.Text);
                     command.Parameters.AddWithValue("@AccountNumber", AcctNumber_tb.Text);
                     command.Parameters.AddWithValue("@AccountType", AcctType_tb.Text);
@@ -54,6 +58,9 @@ namespace Online_Banking_System_WinForms
                         command.ExecuteNonQuery();
                         connection.Close();
                         MessageBox.Show("Account Added Successfully");
+                        OnlineBankingApp onlineBankingApp = new OnlineBankingApp();
+                        onlineBankingApp.Show();
+                        this.Hide();
                     }
                     catch (Exception ex)
                     {
@@ -70,151 +77,113 @@ namespace Online_Banking_System_WinForms
             this.Hide();
         }
 
+        public int GetUserIdByUsername(string username)
+        {
+            string _connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Administrator\\Documents\\OnlineBanking.mdf;Integrated Security=True;Connect Timeout=30";
+            int userId = 0;
+
+            using (SqlConnection connection = new SqlConnection(_connectionString))
+            {
+                string query = "SELECT UserId FROM UserTable WHERE Username = @Username";
+
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@Username", username);
+
+                    try
+                    {
+                        connection.Open();
+                        SqlDataReader reader = command.ExecuteReader();
+
+                        if (reader.Read())
+                        {
+                            userId = Convert.ToInt32(reader["UserId"]);
+                        }
+
+                        reader.Close();
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine("An error occurred: " + ex.Message);
+                    }
+                }
+            }
+
+            return userId;
+        }
+
         #region TB KeyDown Events
         private void AcctName_tb_KeyDown(object sender, KeyEventArgs e)
         {
-            if (AcctName_tb.Text == "Enter Name of Account Holder")
-            {
-                AcctName_tb.Clear();
-                AcctName_tb.ForeColor = Color.Black;
-            }
+            ClearPlaceholderText(AcctName_tb, "Enter Name of Account Holder");
         }
 
         private void AcctNumber_tb_KeyDown(object sender, KeyEventArgs e)
         {
-            if (AcctNumber_tb.Text == "Enter Account Number")
-            {
-                AcctNumber_tb.Clear();
-                AcctNumber_tb.ForeColor = Color.Black;
-            }
+            ClearPlaceholderText(AcctNumber_tb, "Enter Account Number");
         }
 
         private void AcctType_tb_KeyDown(object sender, KeyEventArgs e)
         {
-            if (AcctType_tb.Text == "Enter Account Type")
-            {
-                AcctType_tb.Clear();
-                AcctType_tb.ForeColor = Color.Black;
-            }
+            ClearPlaceholderText(AcctType_tb, "Enter Account Type");
         }
+
         private void AcctBalance_tb_KeyDown(object sender, KeyEventArgs e)
         {
-            if (AcctBalance_tb.Text == "Enter Account Balance")
-            {
-                AcctBalance_tb.Clear();
-                AcctBalance_tb.ForeColor = Color.Black;
-            }
+            ClearPlaceholderText(AcctBalance_tb, "Enter Account Balance");
         }
         #endregion
 
         #region TB Click Events
         private void AcctName_tb_Click(object sender, EventArgs e)
         {
-            if (AcctName_tb.Text == "Enter Name of Account Holder")
-            {
-                AcctName_tb.Clear();
-                AcctName_tb.ForeColor = Color.Black;
-            }
-
-            if (AcctNumber_tb.Text.Length < 1)
-            {
-                AcctNumber_tb.ForeColor = Color.DarkGray;
-                AcctNumber_tb.Text = "Enter Account Number";
-            }
-
-            if (AcctType_tb.Text.Length < 1)
-            {
-                AcctType_tb.ForeColor = Color.DarkGray;
-                AcctType_tb.Text = "Enter Account Type";
-            }
-
-            if (AcctBalance_tb.Text.Length < 1)
-            {
-                AcctBalance_tb.ForeColor = Color.DarkGray;
-                AcctBalance_tb.Text = "Enter Account Balance";
-            }
+            ClearPlaceholderText(AcctName_tb, "Enter Name of Account Holder");
+            SetPlaceholderText(AcctNumber_tb, "Enter Account Number");
+            SetPlaceholderText(AcctType_tb, "Enter Account Type");
+            SetPlaceholderText(AcctBalance_tb, "Enter Account Balance");
         }
 
         private void AcctNumber_tb_Click(object sender, EventArgs e)
         {
-            if (AcctNumber_tb.Text == "Enter Account Number")
-            {
-                AcctNumber_tb.Clear();
-                AcctNumber_tb.ForeColor = Color.Black;
-            }
-
-            if (AcctName_tb.Text.Length < 1)
-            {
-                AcctName_tb.ForeColor = Color.DarkGray;
-                AcctName_tb.Text = "Enter Name of Account Holder";
-            }
-
-            if (AcctType_tb.Text.Length < 1)
-            {
-                AcctType_tb.ForeColor = Color.DarkGray;
-                AcctType_tb.Text = "Enter Account Type";
-            }
-
-            if (AcctBalance_tb.Text.Length < 1)
-            {
-                AcctBalance_tb.ForeColor = Color.DarkGray;
-                AcctBalance_tb.Text = "Enter Account Balance";
-            }
+            ClearPlaceholderText(AcctNumber_tb, "Enter Account Number");
+            SetPlaceholderText(AcctName_tb, "Enter Name of Account Holder");
+            SetPlaceholderText(AcctType_tb, "Enter Account Type");
+            SetPlaceholderText(AcctBalance_tb, "Enter Account Balance");
         }
 
         private void AcctType_tb_Click(object sender, EventArgs e)
         {
-            if (AcctType_tb.Text == "Enter Account Type")
-            {
-                AcctType_tb.Clear();
-                AcctType_tb.ForeColor = Color.Black;
-            }
-
-            if (AcctName_tb.Text.Length < 1)
-            {
-                AcctName_tb.ForeColor = Color.DarkGray;
-                AcctName_tb.Text = "Enter Name of Account Holder";
-            }
-
-            if (AcctNumber_tb.Text.Length < 1)
-            {
-                AcctNumber_tb.ForeColor = Color.DarkGray;
-                AcctNumber_tb.Text = "Enter Account Number";
-            }
-
-            if (AcctBalance_tb.Text.Length < 1)
-            {
-                AcctBalance_tb.ForeColor = Color.DarkGray;
-                AcctBalance_tb.Text = "Enter Account Balance";
-            }
+            ClearPlaceholderText(AcctType_tb, "Enter Account Type");
+            SetPlaceholderText(AcctName_tb, "Enter Name of Account Holder");
+            SetPlaceholderText(AcctNumber_tb, "Enter Account Number");
+            SetPlaceholderText(AcctBalance_tb, "Enter Account Balance");
         }
 
         private void AcctBalance_tb_Click(object sender, EventArgs e)
         {
-            if (AcctBalance_tb.Text == "Enter Account Balance")
-            {
-                AcctBalance_tb.Clear();
-                AcctBalance_tb.ForeColor = Color.Black;
-            }
-
-            if (AcctName_tb.Text.Length < 1)
-            {
-                AcctName_tb.ForeColor = Color.DarkGray;
-                AcctName_tb.Text = "Enter Name of Account Holder";
-            }
-
-            if (AcctNumber_tb.Text.Length < 1)
-            {
-                AcctNumber_tb.ForeColor = Color.DarkGray;
-                AcctNumber_tb.Text = "Enter Account Number";
-            }
-
-            if (AcctType_tb.Text.Length < 1)
-            {
-                AcctType_tb.ForeColor = Color.DarkGray;
-                AcctType_tb.Text = "Enter Account Type";
-            }
+            ClearPlaceholderText(AcctBalance_tb, "Enter Account Balance");
+            SetPlaceholderText(AcctName_tb, "Enter Name of Account Holder");
+            SetPlaceholderText(AcctNumber_tb, "Enter Account Number");
+            SetPlaceholderText(AcctType_tb, "Enter Account Type");
         }
         #endregion
+
+        private void ClearPlaceholderText(TextBox textBox, string placeholder)
+        {
+            if (textBox.Text == placeholder)
+            {
+                textBox.Clear();
+                textBox.ForeColor = Color.Black;
+            }
+        }
+
+        private void SetPlaceholderText(TextBox textBox, string placeholder)
+        {
+            if (textBox.Text.Length < 1)
+            {
+                textBox.ForeColor = Color.DarkGray;
+                textBox.Text = placeholder;
+            }
+        }
     }
 }
