@@ -750,11 +750,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "G:\\Studies\\Online Banking System_WinForms\\Online Banking System_WinForms\\Online Banking System_WinForms.csproj",
+      "projectUniqueName": "D:\\Mr. Reapers' Docs\\GitHub Repositories\\SoulReaper96\\Online-Banking-System_WinForms\\Online Banking System_WinForms\\Online Banking System_WinForms.csproj",
       "projectName": "Online Banking System_WinForms",
-      "projectPath": "G:\\Studies\\Online Banking System_WinForms\\Online Banking System_WinForms\\Online Banking System_WinForms.csproj",
+      "projectPath": "D:\\Mr. Reapers' Docs\\GitHub Repositories\\SoulReaper96\\Online-Banking-System_WinForms\\Online Banking System_WinForms\\Online Banking System_WinForms.csproj",
       "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-      "outputPath": "G:\\Studies\\Online Banking System_WinForms\\Online Banking System_WinForms\\obj\\",
+      "outputPath": "D:\\Mr. Reapers' Docs\\GitHub Repositories\\SoulReaper96\\Online-Banking-System_WinForms\\Online Banking System_WinForms\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

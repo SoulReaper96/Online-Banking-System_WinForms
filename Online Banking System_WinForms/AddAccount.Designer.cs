@@ -47,6 +47,8 @@
             AcctName_tb.Size = new Size(503, 39);
             AcctName_tb.TabIndex = 29;
             AcctName_tb.Text = "Enter Name of Account Holder";
+            AcctName_tb.Click += AcctName_tb_Click;
+            AcctName_tb.KeyDown += AcctName_tb_KeyDown;
             // 
             // AcctNumber_tb
             // 
@@ -58,6 +60,8 @@
             AcctNumber_tb.Size = new Size(503, 39);
             AcctNumber_tb.TabIndex = 28;
             AcctNumber_tb.Text = "Enter Account Number";
+            AcctNumber_tb.Click += AcctNumber_tb_Click;
+            AcctNumber_tb.KeyDown += AcctNumber_tb_KeyDown;
             // 
             // Back_lbl
             // 
@@ -103,6 +107,8 @@
             AcctType_tb.Size = new Size(503, 39);
             AcctType_tb.TabIndex = 30;
             AcctType_tb.Text = "Enter Account Type";
+            AcctType_tb.Click += AcctType_tb_Click;
+            AcctType_tb.KeyDown += AcctType_tb_KeyDown;
             // 
             // AcctBalance_tb
             // 
@@ -114,6 +120,8 @@
             AcctBalance_tb.Size = new Size(503, 39);
             AcctBalance_tb.TabIndex = 31;
             AcctBalance_tb.Text = "Enter Account Balance";
+            AcctBalance_tb.Click += AcctBalance_tb_Click;
+            AcctBalance_tb.KeyDown += AcctBalance_tb_KeyDown;
             // 
             // AddAccount
             // 
