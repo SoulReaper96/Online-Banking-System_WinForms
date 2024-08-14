@@ -750,11 +750,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Mr. Reapers' Docs\\GitHub Repositories\\SoulReaper96\\Online-Banking-System_WinForms\\Online Banking System_WinForms\\Online Banking System_WinForms.csproj",
+      "projectUniqueName": "G:\\GitHub Repo Cloned\\SoulReaper96\\Online-Banking-System_WinForms\\Online Banking System_WinForms\\Online Banking System_WinForms.csproj",
       "projectName": "Online Banking System_WinForms",
-      "projectPath": "D:\\Mr. Reapers' Docs\\GitHub Repositories\\SoulReaper96\\Online-Banking-System_WinForms\\Online Banking System_WinForms\\Online Banking System_WinForms.csproj",
+      "projectPath": "G:\\GitHub Repo Cloned\\SoulReaper96\\Online-Banking-System_WinForms\\Online Banking System_WinForms\\Online Banking System_WinForms.csproj",
       "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-      "outputPath": "D:\\Mr. Reapers' Docs\\GitHub Repositories\\SoulReaper96\\Online-Banking-System_WinForms\\Online Banking System_WinForms\\obj\\",
+      "outputPath": "G:\\GitHub Repo Cloned\\SoulReaper96\\Online-Banking-System_WinForms\\Online Banking System_WinForms\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -772,6 +772,7 @@
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "C:\\Program Files (x86)\\Nevron OpenVision\\NugetPackage\\nevronopenvision": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -823,7 +824,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

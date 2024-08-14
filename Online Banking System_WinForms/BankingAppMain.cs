@@ -44,12 +44,16 @@ namespace Online_Banking_System_WinForms
 
         private void FundsMenu_tool_Click(object sender, EventArgs e)
         {
-
+            TransferFunds transferFunds = new TransferFunds();
+            transferFunds.Show();
+            this.Hide();
         }
 
         private void BillsMenu_tool_Click(object sender, EventArgs e)
         {
-
+            PayBills payBills = new PayBills();
+            payBills.Show();
+            this.Hide();
         }
     }
 }

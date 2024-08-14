@@ -83,3 +83,47 @@ D:\Mr. Reapers' Docs\GitHub Repositories\SoulReaper96\Online-Banking-System_WinF
 D:\Mr. Reapers' Docs\GitHub Repositories\SoulReaper96\Online-Banking-System_WinForms\Online Banking System_WinForms\obj\Debug\net8.0-windows\Online Banking System_WinForms.pdb
 D:\Mr. Reapers' Docs\GitHub Repositories\SoulReaper96\Online-Banking-System_WinForms\Online Banking System_WinForms\obj\Debug\net8.0-windows\Online Banking System_WinForms.genruntimeconfig.cache
 D:\Mr. Reapers' Docs\GitHub Repositories\SoulReaper96\Online-Banking-System_WinForms\Online Banking System_WinForms\obj\Debug\net8.0-windows\ref\Online Banking System_WinForms.dll
+G:\GitHub Repo Cloned\SoulReaper96\Online-Banking-System_WinForms\Online Banking System_WinForms\bin\Debug\net8.0-windows\Online Banking System_WinForms.exe
+G:\GitHub Repo Cloned\SoulReaper96\Online-Banking-System_WinForms\Online Banking System_WinForms\bin\Debug\net8.0-windows\Online Banking System_WinForms.deps.json
+G:\GitHub Repo Cloned\SoulReaper96\Online-Banking-System_WinForms\Online Banking System_WinForms\bin\Debug\net8.0-windows\Online Banking System_WinForms.runtimeconfig.json
+G:\GitHub Repo Cloned\SoulReaper96\Online-Banking-System_WinForms\Online Banking System_WinForms\bin\Debug\net8.0-windows\Online Banking System_WinForms.dll
+G:\GitHub Repo Cloned\SoulReaper96\Online-Banking-System_WinForms\Online Banking System_WinForms\bin\Debug\net8.0-windows\Online Banking System_WinForms.pdb
+G:\GitHub Repo Cloned\SoulReaper96\Online-Banking-System_WinForms\Online Banking System_WinForms\bin\Debug\net8.0-windows\Nevron.Nov.Barcode.dll
+G:\GitHub Repo Cloned\SoulReaper96\Online-Banking-System_WinForms\Online Banking System_WinForms\bin\Debug\net8.0-windows\Nevron.Nov.Chart.dll
+G:\GitHub Repo Cloned\SoulReaper96\Online-Banking-System_WinForms\Online Banking System_WinForms\bin\Debug\net8.0-windows\Nevron.Nov.Diagram.dll
+G:\GitHub Repo Cloned\SoulReaper96\Online-Banking-System_WinForms\Online Banking System_WinForms\bin\Debug\net8.0-windows\Nevron.Nov.GraphicsGL.dll
+G:\GitHub Repo Cloned\SoulReaper96\Online-Banking-System_WinForms\Online Banking System_WinForms\bin\Debug\net8.0-windows\Nevron.Nov.Grid.dll
+G:\GitHub Repo Cloned\SoulReaper96\Online-Banking-System_WinForms\Online Banking System_WinForms\bin\Debug\net8.0-windows\Nevron.Nov.Host.WinBase.dll
+G:\GitHub Repo Cloned\SoulReaper96\Online-Banking-System_WinForms\Online Banking System_WinForms\bin\Debug\net8.0-windows\Nevron.Nov.Host.WinForm.dll
+G:\GitHub Repo Cloned\SoulReaper96\Online-Banking-System_WinForms\Online Banking System_WinForms\bin\Debug\net8.0-windows\Nevron.Nov.Host.Wpf.dll
+G:\GitHub Repo Cloned\SoulReaper96\Online-Banking-System_WinForms\Online Banking System_WinForms\bin\Debug\net8.0-windows\Nevron.Nov.Presentation.dll
+G:\GitHub Repo Cloned\SoulReaper96\Online-Banking-System_WinForms\Online Banking System_WinForms\bin\Debug\net8.0-windows\Nevron.Nov.Schedule.dll
+G:\GitHub Repo Cloned\SoulReaper96\Online-Banking-System_WinForms\Online Banking System_WinForms\bin\Debug\net8.0-windows\Nevron.Nov.Text.dll
+G:\GitHub Repo Cloned\SoulReaper96\Online-Banking-System_WinForms\Online Banking System_WinForms\bin\Debug\net8.0-windows\Nevron.Nov.WinFormControls.dll
+G:\GitHub Repo Cloned\SoulReaper96\Online-Banking-System_WinForms\Online Banking System_WinForms\bin\Debug\net8.0-windows\Nevron.Nov.WpfControls.dll
+G:\GitHub Repo Cloned\SoulReaper96\Online-Banking-System_WinForms\Online Banking System_WinForms\bin\Debug\net8.0-windows\System.Data.SqlClient.dll
+G:\GitHub Repo Cloned\SoulReaper96\Online-Banking-System_WinForms\Online Banking System_WinForms\bin\Debug\net8.0-windows\System.Drawing.Common.dll
+G:\GitHub Repo Cloned\SoulReaper96\Online-Banking-System_WinForms\Online Banking System_WinForms\bin\Debug\net8.0-windows\runtimes\win-arm64\native\sni.dll
+G:\GitHub Repo Cloned\SoulReaper96\Online-Banking-System_WinForms\Online Banking System_WinForms\bin\Debug\net8.0-windows\runtimes\win-x64\native\sni.dll
+G:\GitHub Repo Cloned\SoulReaper96\Online-Banking-System_WinForms\Online Banking System_WinForms\bin\Debug\net8.0-windows\runtimes\win-x86\native\sni.dll
+G:\GitHub Repo Cloned\SoulReaper96\Online-Banking-System_WinForms\Online Banking System_WinForms\bin\Debug\net8.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+G:\GitHub Repo Cloned\SoulReaper96\Online-Banking-System_WinForms\Online Banking System_WinForms\bin\Debug\net8.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+G:\GitHub Repo Cloned\SoulReaper96\Online-Banking-System_WinForms\Online Banking System_WinForms\obj\Debug\net8.0-windows\Online Banking System_WinForms.csproj.AssemblyReference.cache
+G:\GitHub Repo Cloned\SoulReaper96\Online-Banking-System_WinForms\Online Banking System_WinForms\obj\Debug\net8.0-windows\Online_Banking_System_WinForms.AddAccount.resources
+G:\GitHub Repo Cloned\SoulReaper96\Online-Banking-System_WinForms\Online Banking System_WinForms\obj\Debug\net8.0-windows\Online_Banking_System_WinForms.OnlineBankingApp.resources
+G:\GitHub Repo Cloned\SoulReaper96\Online-Banking-System_WinForms\Online Banking System_WinForms\obj\Debug\net8.0-windows\Online_Banking_System_WinForms.Login.resources
+G:\GitHub Repo Cloned\SoulReaper96\Online-Banking-System_WinForms\Online Banking System_WinForms\obj\Debug\net8.0-windows\Online_Banking_System_WinForms.PayBills.resources
+G:\GitHub Repo Cloned\SoulReaper96\Online-Banking-System_WinForms\Online Banking System_WinForms\obj\Debug\net8.0-windows\Online_Banking_System_WinForms.Register.resources
+G:\GitHub Repo Cloned\SoulReaper96\Online-Banking-System_WinForms\Online Banking System_WinForms\obj\Debug\net8.0-windows\Online_Banking_System_WinForms.TransferFunds.resources
+G:\GitHub Repo Cloned\SoulReaper96\Online-Banking-System_WinForms\Online Banking System_WinForms\obj\Debug\net8.0-windows\Online Banking System_WinForms.csproj.GenerateResource.cache
+G:\GitHub Repo Cloned\SoulReaper96\Online-Banking-System_WinForms\Online Banking System_WinForms\obj\Debug\net8.0-windows\Online Banking System_WinForms.GeneratedMSBuildEditorConfig.editorconfig
+G:\GitHub Repo Cloned\SoulReaper96\Online-Banking-System_WinForms\Online Banking System_WinForms\obj\Debug\net8.0-windows\Online Banking System_WinForms.AssemblyInfoInputs.cache
+G:\GitHub Repo Cloned\SoulReaper96\Online-Banking-System_WinForms\Online Banking System_WinForms\obj\Debug\net8.0-windows\Online Banking System_WinForms.AssemblyInfo.cs
+G:\GitHub Repo Cloned\SoulReaper96\Online-Banking-System_WinForms\Online Banking System_WinForms\obj\Debug\net8.0-windows\Online Banking System_WinForms.csproj.CoreCompileInputs.cache
+G:\GitHub Repo Cloned\SoulReaper96\Online-Banking-System_WinForms\Online Banking System_WinForms\obj\Debug\net8.0-windows\Online Banking System_WinForms.sourcelink.json
+G:\GitHub Repo Cloned\SoulReaper96\Online-Banking-System_WinForms\Online Banking System_WinForms\obj\Debug\net8.0-windows\Online B.F59E8FDF.Up2Date
+G:\GitHub Repo Cloned\SoulReaper96\Online-Banking-System_WinForms\Online Banking System_WinForms\obj\Debug\net8.0-windows\Online Banking System_WinForms.dll
+G:\GitHub Repo Cloned\SoulReaper96\Online-Banking-System_WinForms\Online Banking System_WinForms\obj\Debug\net8.0-windows\refint\Online Banking System_WinForms.dll
+G:\GitHub Repo Cloned\SoulReaper96\Online-Banking-System_WinForms\Online Banking System_WinForms\obj\Debug\net8.0-windows\Online Banking System_WinForms.pdb
+G:\GitHub Repo Cloned\SoulReaper96\Online-Banking-System_WinForms\Online Banking System_WinForms\obj\Debug\net8.0-windows\Online Banking System_WinForms.genruntimeconfig.cache
+G:\GitHub Repo Cloned\SoulReaper96\Online-Banking-System_WinForms\Online Banking System_WinForms\obj\Debug\net8.0-windows\ref\Online Banking System_WinForms.dll
