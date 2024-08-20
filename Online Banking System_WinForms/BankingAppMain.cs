@@ -8,6 +8,29 @@ namespace Online_Banking_System_WinForms
         public OnlineBankingApp()
         {
             InitializeComponent();
+            LoadData();
+        }
+
+        private void LoadData()
+        {
+            // Create a DataTable to hold the data
+            DataTable table = new DataTable();
+            table.Columns.Add("Select", typeof(bool));
+            table.Columns.Add("Item", typeof(string));
+
+            // Add some sample data
+            table.Rows.Add(false, "Item 1");
+            table.Rows.Add(false, "Item 2");
+            table.Rows.Add(false, "Item 3");
+
+            // Bind the DataTable to the DataGridView
+            Bills_dgv.DataSource = table;
+
+            // Set the DataGridView properties
+            Bills_dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            Bills_dgv.AllowUserToAddRows = false;
+            Bills_dgv.AllowUserToDeleteRows = false;
+            Bills_dgv.ReadOnly = false;
         }
 
         private void HomeMenu_tool_Click(object sender, EventArgs e)
@@ -44,16 +67,14 @@ namespace Online_Banking_System_WinForms
 
         private void FundsMenu_tool_Click(object sender, EventArgs e)
         {
-            TransferFunds transferFunds = new TransferFunds();
-            transferFunds.Show();
-            this.Hide();
+            FundsMenu_tool.Visible = true;
+            MenuTabs.SelectedTab = TransferFundsTab;
         }
 
         private void BillsMenu_tool_Click(object sender, EventArgs e)
         {
-            PayBills payBills = new PayBills();
-            payBills.Show();
-            this.Hide();
+            BillsMenu_tool.Visible = true;
+            MenuTabs.SelectedTab = PayBillsTab;
         }
     }
 }
