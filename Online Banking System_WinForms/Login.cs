@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.VisualBasic.ApplicationServices;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,8 +14,8 @@ namespace Online_Banking_System_WinForms
 {
     public partial class Login : Form
     {
-        public static string _username { get; internal set; }
-        public static string _password { get; internal set; }
+        public static string? _username { get; internal set; }
+        public static string? _password { get; internal set; }
 
         public Login()
         {

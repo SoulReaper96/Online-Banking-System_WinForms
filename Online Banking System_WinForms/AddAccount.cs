@@ -30,8 +30,8 @@ namespace Online_Banking_System_WinForms
                 return;
             }
 
-            string username = Login._username;
-            int userId = GetUserIdByUsername(username);
+            string? username = Login._username;
+            int? userId = GetUserIdByUsername(username);
 
             if (userId == 0)
             {

@@ -9,6 +9,12 @@ namespace Online_Banking_System_WinForms
         {
             InitializeComponent();
             LoadData();
+            UserName_tb.Text = Login._username;
+            UserPass_tb.Text = Login._password;
+            UserFullName_tb.Text = Register._fullname;
+            UserEmail_tb.Text = Register._email;
+            UserAddr_tb.Text = Register._address;
+            UserPhone_tb.Text = Register._phone;
         }
 
         private void LoadData()

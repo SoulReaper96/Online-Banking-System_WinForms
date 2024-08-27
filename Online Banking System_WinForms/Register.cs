@@ -13,6 +13,14 @@ namespace Online_Banking_System_WinForms
 {
     public partial class Register : Form
     {
+        public static string? _username { get; internal set; }
+        public static string? _fullname { get; internal set; }
+        public static string? _email { get; internal set; }
+        public static string? _address { get; internal set; }
+        public static string? _phone { get; internal set; }
+        public static string? _password { get; internal set; }
+        public static string? _repassword { get; internal set; }
+
         public Register()
         {
             InitializeComponent();
@@ -32,13 +40,13 @@ namespace Online_Banking_System_WinForms
         private void Register_btn_Click(object sender, EventArgs e)
         {
             string _connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Administrator\\Documents\\OnlineBanking.mdf;Integrated Security=True;Connect Timeout=30";
-            string _username = Username_tb.Text;
-            string _fullname = FullName_tb.Text;
-            string _email = Email_tb.Text;
-            string _address = Address_tb.Text;
-            string _phone = Phone_tb.Text;
-            string _password = Password_tb.Text;
-            string _repassword = RePassword_tb.Text;
+            _username = Username_tb.Text;
+            _fullname = FullName_tb.Text;
+            _email = Email_tb.Text;
+            _address = Address_tb.Text;
+            _phone = Phone_tb.Text;
+            _password = Password_tb.Text;
+            _repassword = RePassword_tb.Text;
 
             using (SqlConnection connection = new SqlConnection(_connectionString))
             {
