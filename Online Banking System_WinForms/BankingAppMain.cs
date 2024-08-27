@@ -1,5 +1,8 @@
+using Microsoft.VisualBasic.ApplicationServices;
+using System;
 using System.Data;
 using System.Data.SqlClient;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Online_Banking_System_WinForms
 {
@@ -8,7 +11,8 @@ namespace Online_Banking_System_WinForms
         public OnlineBankingApp()
         {
             InitializeComponent();
-            LoadData();
+            LoadBillsData();
+            LoadAccountsData();
             UserName_tb.Text = Login._username;
             UserPass_tb.Text = Login._password;
             UserFullName_tb.Text = Register._fullname;
@@ -17,7 +21,7 @@ namespace Online_Banking_System_WinForms
             UserPhone_tb.Text = Register._phone;
         }
 
-        private void LoadData()
+        private void LoadBillsData()
         {
             // Create a DataTable to hold the data
             DataTable table = new DataTable();
@@ -38,7 +42,36 @@ namespace Online_Banking_System_WinForms
             Bills_dgv.AllowUserToDeleteRows = false;
             Bills_dgv.ReadOnly = false;
         }
+        private void LoadAccountsData()
+        {
+            string? _connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Administrator\\Documents\\OnlineBanking.mdf;Integrated Security=True;Connect Timeout=30";
 
+            using (SqlConnection connection = new SqlConnection(_connectionString))
+            {
+                string _query = "SELECT HolderName, AccountNumber, AccountType, Balance, UserId FROM AccountTable";
+
+                using (SqlCommand command = new SqlCommand(_query, connection))
+                {
+                    try
+                    {
+                        connection.Open();
+                        SqlDataAdapter adapter = new SqlDataAdapter(command);
+                        DataTable table = new DataTable();
+                        adapter.Fill(table);
+                        Accounts_dgv.DataSource = table;
+                        // Set the DataGridView properties
+                        Accounts_dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                        Accounts_dgv.AllowUserToAddRows = false;
+                        Accounts_dgv.AllowUserToDeleteRows = false;
+                        Accounts_dgv.ReadOnly = false;
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine("An error occurred: " + ex.Message);
+                    }
+                }
+            }
+        }
         private void HomeMenu_tool_Click(object sender, EventArgs e)
         {
             HomeTab.Visible = true;
